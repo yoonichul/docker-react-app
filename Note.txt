@@ -1,0 +1,25 @@
+* docker create command
+docker run <image name>
+docker create <id>
+docker start <id>
+docker exec <id> - 현재 실행 중인 image에 명령어 실행
+docker exec -it <id> <command> 
+-i interactive
+-t terminal
+
+* docker process check command
+docker ps (current process)
+docker ps -a (past + current process)
+
+* docker delete command
+docker rm <id/name>
+docker rm `docker ps -a -q`
+docker system prune 
+
+* command in docker image
+docker exec -it <id> sh
+exit : control + d
+
+* docker image name tag
+docker built -t <userid>/<imagename>:<version> <directory>
+ex) docker build -t yoonheechul/hello:latest ./
